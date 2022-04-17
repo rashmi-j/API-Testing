@@ -47,5 +47,19 @@ public class Pets {
         return response;
 
     }
+
+    public static Response updatePet(int statusCode, String reqBody){
+
+        String endPoint = lf.HOST+"/pet";
+
+        Response response = given().log().ifValidationFails()
+                .header("Content-Type","application/json")
+                .accept("application/json")
+                .body(reqBody)
+                .when().put(endPoint)
+                .then()
+                .assertThat().statusCode(statusCode).extract().response();
+        return response;
+    }
 }
 

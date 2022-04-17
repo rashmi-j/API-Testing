@@ -11,6 +11,21 @@ public class Users {
 
     static Loadconfig lf = new Loadconfig();
 
+    public static Response createUser(String reqBody, int statusCode){
+
+        String endPoint = lf.HOST+"/user";
+
+        Response response = given().log().ifValidationFails().header("Content-Type","application/json")
+                .accept("application.json").body(reqBody)
+                .when().post(endPoint)
+                .then()
+                .assertThat()
+                .statusCode(statusCode).extract().response();
+
+        return response;
+
+    }
+
     public static Response createUserWithArray(int statusCode,String reqBody) {
 
         String endPoint = lf.HOST+"/user/createWithArray";

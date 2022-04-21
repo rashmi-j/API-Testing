@@ -1,9 +1,42 @@
 # API-Testing
-#### Sample API Automation framework using JAVA Library REST ASSURED with CI integrated.
+## Sample API Automation framework using JAVA Library REST ASSURED with CI integrated.
 
-##### HTTP Methods Automated:  
+---------------
+
+### HTTP Methods Automated:  
 1.GET  
 2.POST  
 3.PUT  
-4.DELETE  
+4.DELETE 
 
+---------------
+
+### Sample API's used:  
+
+**Link**: https://petstore.swagger.io/  
+
+------------
+
+**Programming Language**: JAVA  
+
+-------------
+
+**Library**: REST ASSURED. (Rest assured is java library for testing Restful Web services.) 
+
+-------------
+
+**Testing Framework**: TestNG  
+
+---------------
+
+**CI Tool**: Circleci
+
+----------------
+
+**Build Tool**: Maven
+
+-------------
+
+**How to run:**
+
+ - from the project root: mvn -q clean test  

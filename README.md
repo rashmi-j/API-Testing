@@ -39,4 +39,4 @@
 
 **How to run:**
 
- - from the project root: mvn -q clean test  
+ `mvn -q clean test`( from the project root)
